@@ -1,6 +1,6 @@
 # An efficient KNN Approximation Algorithm
 [K-Nearest-Neighbor (KNN)](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm) is an algorithm used in maschine learning from classifying data.
-This Project provides an efficient approximation algorithm for this problem.
+This project provides an efficient approximation algorithm for this problem.
 
 #### What a KNN Algorithm needs to implement
 * ***init***: creating some structure to store the data points and maybe something else
@@ -19,7 +19,7 @@ It may be enougth to store the data points in an array or list. To find the near
 *find* is guarantied to take at least O(n), becauso it is nesaccery to compute the distance to every data point. This has the downsite that calling *find* many times will be costly. The goal is therefore to reduce the cost of *find*.
 
 #### Algorithm Idea
-One could choose a tree datastructure for higher dimensions. It would divide space into smaller and smaller regions. With some luck, the knn are within a small region and most of the data points can be disregarded. That could bring *find* down to O(1), but there is a problem with edge cases: Assume all datapoints lie on a almost perfect circle around the target point. No tree structure could possibly calculate the nearest neighbors without regarding O(n) data points. 
+One could choose a tree datastructure for higher dimensions. It would divide space into smaller and smaller regions. With some luck, the k closest data points are within a small region and most of the data points can be disregarded. That could bring *find* down to O(1), but there is a problem with edge cases: Assume all datapoints lie on a almost perfect circle around the target point. No tree structure could possibly calculate the nearest neighbors without regarding O(n) data points. 
 
 Things change if we want to find a **approximation algorithm**. After all, a close enougth approximation may be good enought for most knn applications.
 We want to ensure that every chosen "nearest neighbor" is at most **$\epsilon$-times** as far from the target as the closest not taken point.
@@ -44,4 +44,4 @@ The *find* method will take therefore only constant steps to hit the base case. 
 This implementation is working on 2-dimensional data and has $\epsilon$ $\le$ 6. For this implementation, the data points are assumed to be normalized to lie within [0,1]<sup>2</sup>. But this assumtion is in principle not required for the idea to work.
 
 #### Conclusion
-The concept can be extended to any dimension and the "surrounding idea" can be developed further to optain smaller $\epsilon$. this algorithm might be useful for real world applications, especially if many calles of the *find*-method are expected and an approximation is good enough.
+The concept can be extended to any dimension and the "surrounding idea" can be developed further to optain smaller $\epsilon$. This algorithm might be useful for real world applications, especially if many calles of the *find*-method are expected and an approximation is good enough.
