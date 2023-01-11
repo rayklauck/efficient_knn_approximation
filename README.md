@@ -1,5 +1,5 @@
 # An efficient KNN Approximation Algorithm
-[K-Nearest-Neighbor (KNN)](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm) is an algorithm used in data science from classifying data.
+[K-Nearest-Neighbor (KNN)](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm) is an algorithm used in maschine learning from classifying data.
 This Project provides an efficient approximation algorithm for this problem.
 
 #### What a KNN Algorithm needs to implement
